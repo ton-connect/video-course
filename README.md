@@ -1,9 +1,11 @@
 # Видео курс по Ton Connect
 
-https://www.youtube.com/@WikiMar
+[Плейлист на Youtube](https://www.youtube.com/playlist?list=PLyDBPwv9EPsCJ226xS5_dKmXXxWx1CKz_)
 
 ## 1. Обзор Ton Connect
-[Youtube](https://www.youtube.com/@WikiMar)
+Обзор TonConnect и его реализаций. Рассматриваем область применения TonConnect, его преимущества и недостатки. Смотрим на  TonConnect в реальных приложениях. Изучаем технические детали принципа работы протокола
+
+[Youtube](https://www.youtube.com/watch?v=JMQUsWAGrgw)
 
 [Презентация](1_overview/ton-connect-overview.pdf)
 

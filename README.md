@@ -22,6 +22,18 @@
     * [Проверка авторизации через Ton Connect на бэкэнде](https://github.com/ton-connect/demo-dapp-backend)
     * [Телеграм бот](https://github.com/ton-connect/demo-telegram-bot)
 
-## 2. Ton Connect SDK на фронтенде, подключение кошелька и отправка транзакции. Авторизация на бэкенеде 
+## 2. Ton Connect SDK на фронтенде, подключение кошелька и отправка транзакции
 
-Coming soon...
+[Youtube](https://www.youtube.com/watch?v=JMQUsWAGrgw)
+
+[Исходный код](2_js-sdk-frontend/src)
+
+### Полезные ссылки
+- [Ton Connect JS SDK](https://github.com/ton-connect/sdk/tree/main/packages/sdk)
+- [Ton Connect JS full API docs](https://ton-connect.github.io/sdk/modules/_tonconnect_sdk.html)
+
+
+
+
+
+

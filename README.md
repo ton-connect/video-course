@@ -3,7 +3,7 @@
 [Плейлист на Youtube](https://www.youtube.com/playlist?list=PLyDBPwv9EPsCJ226xS5_dKmXXxWx1CKz_)
 
 ## 1. Обзор Ton Connect
-Обзор TonConnect и его реализаций. Рассматриваем область применения TonConnect, его преимущества и недостатки. Смотрим на  TonConnect в реальных приложениях. Изучаем технические детали принципа работы протокола
+Обзор TonConnect и его реализаций. Рассматриваем область применения TonConnect, его преимущества и недостатки. Смотрим на TonConnect в реальных приложениях. Изучаем технические детали принципа работы протокола
 
 [Youtube](https://www.youtube.com/watch?v=JMQUsWAGrgw)
 
@@ -23,6 +23,7 @@
     * [Телеграм бот](https://github.com/ton-connect/demo-telegram-bot)
 
 ## 2. Ton Connect SDK на фронтенде, подключение кошелька и отправка транзакции
+Использование TonConnect JavaScript SDK для создания фронтенда простого даппа. Подключение мобильных и браузерных кошельков, отправка транзакции.  
 
 [Youtube](https://www.youtube.com/watch?v=JMQUsWAGrgw)
 

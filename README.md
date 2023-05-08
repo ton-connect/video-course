@@ -25,7 +25,7 @@
 ## 2. Ton Connect SDK на фронтенде, подключение кошелька и отправка транзакции
 Использование TonConnect JavaScript SDK для создания фронтенда простого даппа. Подключение мобильных и браузерных кошельков, отправка транзакции.  
 
-[Youtube](https://www.youtube.com/watch?v=JMQUsWAGrgw)
+[Youtube](https://www.youtube.com/watch?v=lQcnh426QaY)
 
 [Исходный код](2_js-sdk-frontend/src)
 

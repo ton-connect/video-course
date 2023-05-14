@@ -6,6 +6,7 @@ import {useSendTransaction} from "./hooks/useSendTransaction";
 import {useEffect, useMemo, useState} from "react";
 import {isWalletInfoCurrentlyEmbedded, WalletInfo} from "@tonconnect/sdk";
 import {connector} from "./connector";
+import {tonProofApi} from "./ton-proof-api";
 
 function App() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -26,6 +27,16 @@ function App() {
         }
         onOpen();
     }
+
+    useEffect(() => {
+        connector.onStatusChange(async wallet => {
+            if (wallet?.connectItems?.tonProof && !('error' in wallet.connectItems.tonProof)) {
+                await tonProofApi.checkProof(wallet.connectItems.tonProof.proof, wallet.account);
+
+                console.log(await tonProofApi.getAccountInfo(wallet.account));
+            }
+        })
+    }, [])
 
     return (
     <Box p="4">

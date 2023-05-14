@@ -1,6 +1,6 @@
-import {FunctionComponent, useEffect, useState} from "react";
+import {FunctionComponent, useEffect, useMemo, useState} from "react";
 import {
-    Button,
+    Button, Center,
     Flex, Image,
     Modal,
     ModalBody,
@@ -13,10 +13,14 @@ import {isWalletInfoCurrentlyInjected, isWalletInfoRemote, WalletInfo, WalletInf
 import {connector} from "../connector";
 import {QRCodeModal} from "./QRCodeModal";
 import {useWallet} from "../hooks/useWallet";
+import QRCode from "react-qr-code";
 
 export const ConnectWalletModal: FunctionComponent<{ isOpen: boolean; onClose: () => void }> = ({ isOpen, onClose }) => {
     const [walletsList, setWalletsList] = useState<WalletInfo[] | null>(null);
     const [selectedWalletInfo, setSelectedWalletInfo] = useState<WalletInfoRemote | null>(null);
+    const [unifiedDeeplink, setUnifiedDeeplink] = useState<string | undefined>();
+
+    const remoteWallets = useMemo(() => walletsList?.filter(isWalletInfoRemote).map(item => ({ bridgeUrl: item.bridgeUrl })), [walletsList])
 
     const wallet = useWallet();
 
@@ -29,6 +33,14 @@ export const ConnectWalletModal: FunctionComponent<{ isOpen: boolean; onClose: (
     useEffect(() => {
         connector.getWallets().then(setWalletsList);
     }, []);
+
+    useEffect(() => {
+        if (isOpen && remoteWallets?.length) {
+            const deeplink = connector.connect(remoteWallets);
+            setUnifiedDeeplink(deeplink);
+            console.log(deeplink);
+        }
+    }, [isOpen, remoteWallets])
 
 
     const onWalletClick = (walletInfo: WalletInfo) => {
@@ -50,6 +62,9 @@ export const ConnectWalletModal: FunctionComponent<{ isOpen: boolean; onClose: (
                 <ModalCloseButton />
                 <ModalHeader>Choose a wallet</ModalHeader>
                 <ModalBody>
+                    <Center mb="5">
+                        {unifiedDeeplink && <QRCode value={unifiedDeeplink} /> }
+                    </Center>
                     {
                         !!walletsList && <Flex gap="2" flexWrap="wrap">{
                             walletsList.map(walletInfo =>

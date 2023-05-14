@@ -4,15 +4,21 @@ import {WalletInfoRemote} from "@tonconnect/sdk";
 import QRCode from 'react-qr-code';
 import {connector} from "../connector";
 import {useWallet} from "../hooks/useWallet";
+import {tonProofApi} from "../ton-proof-api";
 
 export const QRCodeModal: FunctionComponent<{ isOpen: boolean; onClose: () => void, walletInfo: WalletInfoRemote | null }> = ({isOpen, onClose, walletInfo}) => {
 
     const [walletConnectionURL, setWalletConnectionURL] = useState('');
 
     useEffect(() => {
-        if (walletInfo) {
-            setWalletConnectionURL(connector.connect({ bridgeUrl: walletInfo.bridgeUrl, universalLink: walletInfo.universalLink }));
-        }
+        (async () => {
+            const payload = await tonProofApi.generatePayload();
+            if (walletInfo) {
+                setWalletConnectionURL(
+                    connector.connect({ bridgeUrl: walletInfo.bridgeUrl, universalLink: walletInfo.universalLink }, payload)
+                );
+            }
+        })()
     }, [walletInfo]);
 
     const wallet = useWallet();

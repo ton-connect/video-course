@@ -34,6 +34,22 @@
 - [Ton Connect JS full API docs](https://ton-connect.github.io/sdk/modules/_tonconnect_sdk.html)
 
 
+## 3. Ton Connect SDK на фронтенде: единый QR-код и авторизация через ton_proof
+Разбираемся в устройстве авторизации на бэкэнде через TonConnect с помощью ton_proof.
+Добавляем к фронтенд-части с предыдущего урока единый QR-код и авторизацию на бэкэнде через ton_proof.
+
+[Youtube](https://www.youtube.com/watch?v=lQcnh426QaY)
+
+[Презентация](3_single-qr&ton-proof/src)
+[Исходный код](3_single-qr&ton-proof/ton-connect-single-qr&ton-proof.pdf)
+
+### Полезные ссылки
+- [Репозиторий wallets list](https://github.com/ton-blockchain/wallets-list)
+- [Спецификация ton_proof](https://github.com/ton-blockchain/ton-connect/blob/main/requests-responses.md#address-proof-signature-ton_proof)
+- [Документация по использованию ton_proof в TonConnect SDK](https://github.com/ton-connect/sdk/tree/main/packages/sdk#backend-authorization)
+- [Пример проверки ton_proof на Go](https://github.com/ton-connect/demo-dapp-backend)
+- [Пример проверки ton_proof на JS](https://gist.github.com/TrueCarry/cac00bfae051f7028085aa018c2a05c6)
+
 
 
 

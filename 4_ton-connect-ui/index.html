@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/@tonconnect/ui@1.0.0-beta.5/dist/tonconnect-ui.min.js"></script>
+</head>
+<body style="padding: 10px; margin: 0">
+
+    <div id="connect-button-root" style="width: fit-content; margin-left: auto"></div>
+
+    <script>
+        const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+            manifestUrl: 'https://ton-connect.github.io/demo-dapp-with-react-ui/tonconnect-manifest.json',
+            buttonRootId: 'connect-button-root'
+        });
+
+
+        tonConnectUI.onStatusChange(console.log);
+    </script>
+
+</body>
+</html>

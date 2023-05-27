@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="connect-button-root" style="margin-left: auto; width: fit-content"></div>
+
+    <div id="loading">Loading...</div>
+
+    <div id="account-info" style="display: flex; align-items: center; gap: 10px"></div>
+
+    <br />
+    <br />
+
+    <button id="send-tx-button">Send tx</button>
+
+    <br />
+    <br />
+
+    <button id="own-connect-wallet-btn">Own connect wallet btn</button>
+    <button id="own-disconnect-wallet-btn">Own disconnect wallet btn</button>
+
+
+    <br />
+    <br />
+
+    <select id="lang-select">
+      <option>en</option>
+      <option>ru</option>
+    </select>
+
+    <select id="theme-select">
+      <option>DARK</option>
+      <option>LIGHT</option>
+      <option>SYSTEM</option>
+    </select>
+
+    <select id="br-select">
+      <option>m</option>
+      <option>s</option>
+      <option>none</option>
+    </select>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

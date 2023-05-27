@@ -40,8 +40,8 @@
 
 [Youtube](https://www.youtube.com/watch?v=lQcnh426QaY)
 
-[Презентация](3_single-qr&ton-proof/src)
-[Исходный код](3_single-qr&ton-proof/ton-connect-single-qr&ton-proof.pdf)
+[Исходный код](3_single-qr&ton-proof/src)
+[Презентация](3_single-qr&ton-proof/ton-connect-single-qr&ton-proof.pdf)
 
 ### Полезные ссылки
 - [Репозиторий wallets list](https://github.com/ton-blockchain/wallets-list)
@@ -51,6 +51,14 @@
 - [Пример проверки ton_proof на JS](https://gist.github.com/TrueCarry/cac00bfae051f7028085aa018c2a05c6)
 
 
+## 4. Ton Connect UI
+Создаем дапп с использованием библиотеки TonConnect UI. Изучаем возможности кастомизации TonConnect UI.
 
+[Youtube](https://www.youtube.com/watch?v=lQcnh426QaY)
 
+[Презентация](4_ton-connect-ui/ton-connect-ui.pdf)
+[Исходный код](4_ton-connect-ui/ton-connect-ui-with-bundler)
 
+### Полезные ссылки
+- [Репозиторий TonConnect UI](https://github.com/ton-connect/sdk/tree/main/packages/ui)
+- [Пример использования](https://github.com/ton-connect/demo-dapp-with-react-ui)

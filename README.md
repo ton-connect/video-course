@@ -38,7 +38,7 @@
 Разбираемся в устройстве авторизации на бэкэнде через TonConnect с помощью ton_proof.
 Добавляем к фронтенд-части с предыдущего урока единый QR-код и авторизацию на бэкэнде через ton_proof.
 
-[Youtube](https://www.youtube.com/watch?v=lQcnh426QaY)
+[Youtube](https://www.youtube.com/watch?v=i2HzhM59kfQ&t=2s)
 
 [Исходный код](3_single-qr&ton-proof/src)
 [Презентация](3_single-qr&ton-proof/ton-connect-single-qr&ton-proof.pdf)
@@ -54,11 +54,23 @@
 ## 4. Ton Connect UI
 Создаем дапп с использованием библиотеки TonConnect UI. Изучаем возможности кастомизации TonConnect UI.
 
-[Youtube](https://www.youtube.com/watch?v=lQcnh426QaY)
+[Youtube](https://www.youtube.com/watch?v=joU7jBmmRWs)
 
 [Презентация](4_ton-connect-ui/ton-connect-ui.pdf)
 [Исходный код](4_ton-connect-ui/ton-connect-ui-with-bundler)
 
 ### Полезные ссылки
 - [Репозиторий TonConnect UI](https://github.com/ton-connect/sdk/tree/main/packages/ui)
+- [Пример использования](https://github.com/ton-connect/demo-dapp-with-react-ui)
+
+## 5. Ton proof вместе c Ton Connect UI и Ton Connect UI-React
+Подключаем авторизацию на бэкэнде к даппу на TonConnect UI. Создаем дапп с использованием TonConnect UI-React
+
+[Youtube](https://www.youtube.com/watch?v=lQcnh426QaY)
+
+[Презентация](5_ton-connect-ui-react/ton-connect-ui-react.pdf)
+[Исходный код](5_ton-connect-ui-react/src)
+
+### Полезные ссылки
+- [Репозиторий TonConnect UI React](https://github.com/ton-connect/sdk/tree/main/packages/ui-react)
 - [Пример использования](https://github.com/ton-connect/demo-dapp-with-react-ui)

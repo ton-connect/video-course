@@ -32,3 +32,11 @@ body {
   padding: 10px;
   min-height: 100vh;
 }
+
+div[data-tc-notification="true"] {
+  background-color: green;
+}
+
+button[data-tc-button="true"] {
+  border: 2px solid red;
+}

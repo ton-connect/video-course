@@ -1,42 +1,10 @@
 import './style.css'
 
-import {BorderRadius, Locales, THEME, Theme, TonConnectUI} from '@tonconnect/ui';
+import {BorderRadius, Locales, Theme} from '@tonconnect/ui';
+import {tonConnectUI} from "./connector";
+import {BackendAuth} from "./backend-auth";
 
 
-const tonConnectUI = new TonConnectUI({
-    manifestUrl: 'https://ton-connect.github.io/demo-dapp-with-react-ui/tonconnect-manifest.json',
-    buttonRootId: 'connect-button-root',
-    actionsConfiguration: {
-        modals: ['error'],
-        notifications: ['before' ,'success', 'error'],
-    },
-    walletsListConfiguration: {
-        includeWallets: [
-            {
-                name: 'My wallet!',
-                aboutUrl: 'https://example.com',
-                imageUrl: 'https://api.ton.app/uploads/Wallet_95a1aececf.png',
-                universalLink: 'https://example.com',
-                bridgeUrl: 'https://example.com',
-                jsBridgeKey: 'my_wallet'
-            }
-        ]
-    },
-    uiPreferences: {
-        colorsSet: {
-            [THEME.DARK]: {
-                connectButton: {
-                    background: 'red',
-                    foreground: 'blue'
-                },
-                accent: 'orange'
-            },
-            [THEME.LIGHT]: {
-
-            }
-        }
-    }
-});
 
 tonConnectUI.onStatusChange(wallet => {
     const root = document.getElementById('account-info')!;
@@ -120,3 +88,14 @@ brSelect.onchange = () => {
     }
 }
 
+
+const demoBackendButton = document.getElementById('ton-proof-demo') as HTMLButtonElement;
+const backendAuth = new BackendAuth();
+backendAuth.onAccessTokenChange = token => {
+    if (token) {
+        demoBackendButton.style.display = 'block';
+        demoBackendButton.onclick = () => backendAuth.getAccountInfo(tonConnectUI.wallet!.account).then(v => alert(JSON.stringify(v)));
+    } else {
+        demoBackendButton.style.display = 'none';
+    }
+}
